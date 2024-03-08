@@ -201,10 +201,7 @@ namespace Foodie.User
 
         }
 
-
-
-
-
+       
 
         void DeleteCartItem(int _productId, SqlTransaction sqlTransaction, SqlConnection sqlConnection)
         {

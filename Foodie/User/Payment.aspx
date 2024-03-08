@@ -27,7 +27,7 @@
         }
     </style>
     <script>
-         /*For disappearing alert message*/
+        /*For disappearing alert message*/
         window.onload = function () {
             var seconds = 5;
             setTimeout(function () {
@@ -42,13 +42,13 @@
 
     <%--Function for preventing back button--%>
     <script type="text/javascript">
-      function DisableBackButton() {
-       window.history.forward()
-      }
-      DisableBackButton();
-       window.onload = DisableBackButton;
-       window.onpageshow = function(evt) { if (evt.persisted) DisableBackButton() }
-        window.onunload = function() { void (0) }
+        function DisableBackButton() {
+            window.history.forward()
+        }
+        DisableBackButton();
+        window.onload = DisableBackButton;
+        window.onpageshow = function (evt) { if (evt.persisted) DisableBackButton() }
+        window.onunload = function () { void (0) }
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -211,12 +211,34 @@
                             <!-- End -->
                         </div>
                         <div class="card-footer">
-                            <b class="badge badge-success badge-pill shadow-sm">Order Total: ₹ <% Response.Write(Session["grandTotalPrice"]); %> </b>
+                            <%--<b class="badge badge-success badge-pill shadow-sm">Order Total: ₹ <% Response.Write(Session["grandTotalPrice"]); %> </b>--%>
+                            <b class="badge badge-success badge-pill shadow-sm">Order Total: ₹ <% Response.Write(Session["grandTotalPrice1"]); %> </b>
                             <div class="pt-1">
                                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="card"
                                     HeaderText="Fix the following errors" Font-Names="Segoe Script" />
                             </div>
+
                         </div>
+
+                        <!--coupon-->
+<%--                            <div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="input-group mb-3">
+                <asp:TextBox ID="txtCouponCode" runat="server" CssClass="form-control" placeholder="Enter Coupon Code"></asp:TextBox>
+                <div class="input-group-append">
+                    <asp:Button ID="btnApplyCoupon" runat="server" CssClass="btn btn-primary" Text="Apply Coupon" OnClick="btnApplyCoupon_Click" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <asp:Label ID="lblDiscountedTotal" runat="server" CssClass="h5 text-success" Text=""></asp:Label>
+        </div>
+    </div>
+</div>--%>
                     </div>
                 </div>
             </div>

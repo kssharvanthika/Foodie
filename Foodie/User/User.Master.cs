@@ -9,6 +9,9 @@ namespace Foodie.User
 {
     public partial class User : System.Web.UI.MasterPage
     {
+        public string UserName { get; internal set; }
+        public int UserId { get; internal set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!Request.Url.AbsoluteUri.ToString().Contains("Default.aspx"))

@@ -152,14 +152,14 @@ namespace Foodie.Admin
                     "../Images/No_image.png" : "../" + dt.Rows[0]["ImageUrl"].ToString();
                 imgProduct.Height = 200;
                 imgProduct.Width = 200;
-                hdnId.Value = dt.Rows[0]["ProductId"].ToString();
+                hdnId.Value = dt.Rows[0]["ProductsId"].ToString();
                 btnAddOrUpdate.Text = "Update";
                 LinkButton btn = e.Item.FindControl("lnkEdit") as LinkButton;
                 btn.CssClass = "badge badge-warning";
             }
             else if (e.CommandName == "delete")
             {
-                //con = new SqlConnection(Connection.GetConnectionString());
+                con = new SqlConnection(Connection.GetConnectionString());
                 cmd = new SqlCommand("Product_Crud", con);
                 cmd.Parameters.AddWithValue("@Action", "DELETE");
                 cmd.Parameters.AddWithValue("@ProductId", e.CommandArgument);

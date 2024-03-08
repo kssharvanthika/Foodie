@@ -22,12 +22,10 @@
               </h2>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+              Indulge your taste buds in a symphony of flavors at QuickBite – where every bite is a celebration of deliciousness! Our motto, 'QuickBite, Delight in Every Bite,' encapsulates our commitment to delivering speedy service without compromising on taste. From mouthwatering burgers to crispy fries and delectable desserts, we're your go-to destination for a fast and flavorful feast. At QuickBite, we believe in making every meal a 
+                delightful experience, ensuring that your cravings are satisfied with each and every visit.
             </p>
-            <a href="">
+            <a href="videos.aspx">
               Read More
             </a>
           </div>

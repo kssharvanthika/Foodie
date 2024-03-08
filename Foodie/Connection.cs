@@ -98,6 +98,11 @@ namespace Foodie
             return uniqueId;
 
         }
+
+        //internal static void verifyPaymentSignature(Dictionary<string, string> attributes)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 
     public class DashboardCount

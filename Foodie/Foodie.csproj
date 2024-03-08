@@ -43,10 +43,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.Base, Version=24.0.49.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <HintPath>..\packages\EO.WebBrowser.24.0.49\lib\EO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebBrowser, Version=24.0.49.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <HintPath>..\packages\EO.WebBrowser.24.0.49\lib\EO.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebEngine, Version=24.0.49.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <HintPath>..\packages\EO.WebBrowser.24.0.49\lib\EO.WebEngine.dll</HintPath>
+    </Reference>
     <Reference Include="itextsharp">
       <HintPath>.\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Razorpay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Razorpay.3.1.0\lib\net47\Razorpay.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -56,6 +78,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Providers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -73,6 +98,7 @@
     <Content Include="Admin\Category.aspx" />
     <Content Include="Admin\Contacts.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="Admin\employeepay.aspx" />
     <Content Include="Admin\OrderStatus.aspx" />
     <Content Include="Admin\Product.aspx" />
     <Content Include="Admin\Report.aspx" />
@@ -186,21 +212,31 @@
     <Content Include="assets\pages\widget\amchart\serial.min.js" />
     <Content Include="assets\pages\widget\amchart\worldLow.js" />
     <Content Include="assets\pages\widget\amchart\worldLow.min.js" />
+    <Content Include="email.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\payment-bg.png" />
     <Content Include="User\About.aspx" />
     <Content Include="User\Cart.aspx" />
+    <Content Include="User\ChangePassword.aspx" />
+    <Content Include="User\Charge.aspx" />
+    <Content Include="User\checkout.aspx" />
     <Content Include="User\Contact.aspx" />
     <Content Include="User\Default.aspx" />
     <Content Include="User\Invoice.aspx" />
     <Content Include="User\Login.aspx" />
     <Content Include="User\Menu.aspx" />
     <Content Include="User\Payment.aspx" />
+    <Content Include="User\Payment1.aspx" />
+    <Content Include="User\payment2.aspx" />
+    <Content Include="User\PaymentPage.aspx" />
     <Content Include="User\Profile.aspx" />
     <Content Include="User\Registration.aspx" />
+    <Content Include="User\ResetPassword.aspx" />
     <Content Include="User\SliderUserControl1.ascx" />
+    <Content Include="User\Success.aspx" />
+    <Content Include="User\videos.aspx" />
+    <Content Include="User\Wishlist.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\Admin.Master.cs">
@@ -231,6 +267,13 @@
     <Compile Include="Admin\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\employeepay.aspx.cs">
+      <DependentUpon>employeepay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\employeepay.aspx.designer.cs">
+      <DependentUpon>employeepay.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\OrderStatus.aspx.cs">
       <DependentUpon>OrderStatus.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -260,10 +303,18 @@
       <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="email.aspx.cs">
+      <DependentUpon>email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="email.aspx.designer.cs">
+      <DependentUpon>email.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendEmailWithGoogleSMTP.cs" />
     <Compile Include="User\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -277,6 +328,27 @@
     </Compile>
     <Compile Include="User\Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Charge.aspx.cs">
+      <DependentUpon>Charge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Charge.aspx.designer.cs">
+      <DependentUpon>Charge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\checkout.aspx.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\checkout.aspx.designer.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -320,6 +392,27 @@
     <Compile Include="User\Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User\Payment1.aspx.cs">
+      <DependentUpon>Payment1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Payment1.aspx.designer.cs">
+      <DependentUpon>Payment1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\payment2.aspx.cs">
+      <DependentUpon>payment2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\payment2.aspx.designer.cs">
+      <DependentUpon>payment2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\PaymentPage.aspx.cs">
+      <DependentUpon>PaymentPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\PaymentPage.aspx.designer.cs">
+      <DependentUpon>PaymentPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -334,12 +427,26 @@
     <Compile Include="User\Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User\SliderUserControl1.ascx.cs">
       <DependentUpon>SliderUserControl1.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User\SliderUserControl1.ascx.designer.cs">
       <DependentUpon>SliderUserControl1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Success.aspx.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Success.aspx.designer.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\User.Master.cs">
       <DependentUpon>User.Master</DependentUpon>
@@ -348,13 +455,21 @@
     <Compile Include="User\User.Master.designer.cs">
       <DependentUpon>User.Master</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="User\videos.aspx.cs">
+      <DependentUpon>videos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="User\videos.aspx.designer.cs">
+      <DependentUpon>videos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User\Wishlist.aspx.cs">
+      <DependentUpon>Wishlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Wishlist.aspx.designer.cs">
+      <DependentUpon>Wishlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\WishlistDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Admin.Master" />

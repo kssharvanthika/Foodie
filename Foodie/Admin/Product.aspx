@@ -159,7 +159,8 @@
                                                                      <th>Qty</th>
                                                                 <th>Category</th>
                                                                
-                                                                 <th>IsActive</th> <th>Decsription</th>
+                                                                 <th>IsActive</th>
+                                                                <th>Decsription</th>
                                                                  <th>CreatedDate</th>
                                                                  <th class="datatable-nosort">Action</th>
                                                             </tr>

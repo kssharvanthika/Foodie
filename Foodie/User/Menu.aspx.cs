@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Foodie.Admin;
 using System.Runtime.Remoting.Messaging;
+using System.Web.Services;
 
 namespace Foodie.User
 {
@@ -119,9 +120,20 @@ namespace Foodie.User
             }
             return quantity;
         }
+
+        protected void lnkAddToWishlist_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
         //public string LowerCase(object obj)
         //{
         //    return obj.ToString().ToLower();
         //}
+
+
+
+
     }
 }

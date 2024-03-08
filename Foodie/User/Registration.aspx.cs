@@ -7,6 +7,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
+using System.Net.Mail;
+using System.Net;
+using static System.Net.WebRequestMethods;
 
 namespace Foodie.User
 {
@@ -155,6 +158,91 @@ namespace Foodie.User
             txtPassword.Text = string.Empty;
 
         }
+
+        
+
+        protected void btnSendOTP_Click(object sender, EventArgs e)
+        {
+           
+
+
+            
+                string userEmail = txtEmail.Text;
+
+                // TODO: Validate email format and check if it's a registered email
+
+                // Generate OTP
+                string otp = GenerateOTP();
+
+                // Send OTP to the user's email
+                SendEmail(userEmail, "OTP for Registration (ICE CUBE)", $"Your OTP is: {otp}");
+
+                // Store OTP in session or database for verification
+                Session["UserOTP"] = otp;
+
+                lblMessage.Text = "OTP has been sent to your email.";
+            }
+
+            protected void btnVerifyOTP_Click(object sender, EventArgs e)
+            {
+                string enteredOTP = txtEnteredOTP.Text;
+
+                if (Session["UserOTP"] != null)
+                {
+                    string storedOTP = Session["UserOTP"].ToString();
+
+                    if (enteredOTP == storedOTP)
+                    {
+                        lblMessage.Text = "OTP verification successful. User registered!";
+                        // TODO: Implement user registration logic
+                    }
+                    else
+                    {
+                        lblMessage.Text = "Incorrect OTP. Please try again.";
+                    }
+
+                    // Clear the stored OTP after verification
+                    Session.Remove("UserOTP");
+                }
+                else
+                {
+                    lblMessage.Text = "OTP session expired. Please request a new OTP.";
+                }
+            }
+
+            private string GenerateOTP()
+            {
+                // TODO: Implement your OTP generation logic (e.g., using Random class)
+                //return "123456"; // For simplicity, return a hardcoded value in this example
+            
+                 Random r = new Random();
+
+                 string otp = r.Next(10001, 99999).ToString();
+            return otp;
+        }
+
+        private void SendEmail(string to, string subject, string body)
+            {
+                // TODO: Update email settings with your SMTP server details
+                string smtpServer = "smtp.gmail.com";
+                int smtpPort = 587;
+            string smtpUsername = "icecube122001@gmail.com";
+                string smtpPassword = "dfzngfbaqiorvvmm";
+
+                using (SmtpClient client = new SmtpClient(smtpServer, smtpPort))
+                {
+                    client.EnableSsl = true;
+                    client.UseDefaultCredentials = false;
+                    client.Credentials = new NetworkCredential(smtpUsername, smtpPassword);
+
+                //MailMessage message = new MailMessage("icecube122001@gmail.com", "kssharvanthika123@gmail.com", "OTP for Registration", "hai");
+                MailMessage message = new MailMessage("icecube122001@gmail.com", to, subject, body);
+                client.Send(message);
+                }
+            }
+        }
     }
+
+
     
-}
+    

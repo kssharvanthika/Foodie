@@ -27,7 +27,7 @@ namespace Foodie.User
                 else
                 {
                     getCartItems();
-;                }
+;               }
             }
         }
         void getCartItems()
@@ -155,7 +155,7 @@ namespace Foodie.User
                 }
                 if (isTrue)
                 {
-                    Response.Redirect("Payment.aspx");
+                    Response.Redirect("checkout.aspx");
 
                 }
                 else

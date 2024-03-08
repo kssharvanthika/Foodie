@@ -181,10 +181,8 @@
               </h2>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+           Our mantra, 'Tasty Express, Where Flavor Meets Fast,' reflects our dedication to crafting scrumptious meals that fit seamlessly into your busy lifestyle. With a menu bursting with bold and zesty options, we redefine fast food by infusing it with premium quality and unparalleled taste. Join us at Tasty Express – where every meal is a journey of 
+                culinary delight, ensuring that every moment you spend with us is as delicious as it is convenient."
             </p>
             <a href="">
               Read More
@@ -212,7 +210,8 @@
             <div class="box">
               <div class="detail-box">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                 I recently discovered this charming cafe, and it has quickly become my favorite spot in town. 
+                    The cozy ambiance creates a welcoming atmosphere, perfect for a casual meal or catching up with friends. 
                 </p>
                 <h6>
                   Moana Michell
@@ -230,7 +229,7 @@
             <div class="box">
               <div class="detail-box">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                  I've been a regular at this cafe for the past few months, and while the food is generally good, there have been some inconsistencies. 
                 </p>
                 <h6>
                   Mike Hamell

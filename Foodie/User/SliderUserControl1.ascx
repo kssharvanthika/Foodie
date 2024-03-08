@@ -9,13 +9,14 @@
              <div class="col-md-7 col-lg-6 ">
                <div class="detail-box">
                  <h1>
-                   Fast Food Restaurant
+                   Ice Cube Cafe
                  </h1>
                  <p>
-                   Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                   Awaken Your Senses – Unwind, Relax, and Revel in Rich Aromas!"
+"Café Chic: Where Style Meets Steaming Cups and Sweet Moments!
                  </p>
                  <div class="btn-box">
-                   <a href="" class="btn1">
+                   <a href="Menu.aspx" class="btn1">
                      Order Now
                    </a>
                  </div>
@@ -30,13 +31,14 @@
              <div class="col-md-7 col-lg-6 ">
                <div class="detail-box">
                  <h1>
-                   Fast Food Restaurant
+                   Grilled Salmon
                  </h1>
                  <p>
-                   Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                    Espresso Yourself: Where Flavor and Friends Meet!"
+"A Sip of Happiness in Every Cup – Welcome to Mellow Mocha Café!
                  </p>
                  <div class="btn-box">
-                   <a href="" class="btn1">
+                   <a href="Menu.aspx" class="btn1">
                      Order Now
                    </a>
                  </div>
@@ -51,13 +53,14 @@
              <div class="col-md-7 col-lg-6 ">
                <div class="detail-box">
                  <h1>
-                   Fast Food Restaurant
+                   DelishDynamo
                  </h1>
                  <p>
-                   Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                    From the first sip of our signature blends to the last bite of our mouthwatering pastries, we aim to create an atmosphere where you can espresso yourself. Join us at Bean Bliss – where the magic happens in every cup,
+                     and every encounter becomes a memorable chapter in your daily narrative."
                  </p>
                  <div class="btn-box">
-                   <a href="" class="btn1">
+                   <a href="Menu.aspx" class="btn1">
                      Order Now
                    </a>
                  </div>
