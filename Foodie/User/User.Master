@@ -19,6 +19,9 @@
     <link rel="shortcut icon" href="../TemplateFiles/images/favicon.png" type="">
 
     <title>FOODIE </title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Include SweetAlert CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="../TemplateFiles/css/bootstrap.css" />
@@ -29,13 +32,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
     <!-- font awesome style -->
     <link href="../TemplateFiles/css/font-awesome.min.css" rel="stylesheet" />
-
+    
     <!-- Custom styles for this template -->
     <link href="../TemplateFiles/css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="../TemplateFiles/css/responsive.css" rel="stylesheet" />
     <!-- jQery -->
     <script src="../TemplateFiles/js/jquery-3.4.1.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Include SweetAlert JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- Your custom script -->
+ 
     <script>
         $(function () {
             //this will get URL ate the address bar
@@ -51,10 +60,41 @@
         });
     </script>
 
+  
+
+
+
+   <style>
+    @keyframes blink {
+        0% { background-color: red; }
+        50% { background-color: blue; }
+        100% { background-color: red; }
+    }
+
+    .blinking-button {
+        animation: blink 1s infinite;
+        color: white; /* Set text color to white */
+        border: none; /* Remove border for better appearance */
+        padding: 10px 20px; /* Add padding for better appearance */
+    }
+</style>
+
+   
+      
+
+
+
+
+
+
+
     <asp:ContentPlaceHolder ID="head" runat="server">
+      
     </asp:ContentPlaceHolder>
 </head>
 <body>
+   
+
     <form id="form1" runat="server">
         <div class="hero_area">
             <div class="bg-box">
@@ -68,6 +108,11 @@
                             <span>ICE CUBE
                             </span>
                         </a>
+                      <asp:Button ID="btnBlinking" runat="server" Text="Festival offer" CssClass="blinking-button" OnClick="btnBlinking_Click" />
+
+                        
+
+
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class=""></span>
@@ -191,16 +236,17 @@
                             </div>
                         </div>
                     </nav>
+
                 </div>
             </header>
             <!-- end header section -->
             <!-- slider section -->
+            
             <asp:Panel ID="pnSliderUC" runat="server"></asp:Panel>
             <!-- end slider section -->
         </div>
 
-
-
+       
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
 
@@ -279,9 +325,12 @@
                 </div>
             </div>
         </footer>
+
         <!-- footer section -->
 
     </form>
+    
+    <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="cltilyz5b00eus9b1w4wkd4j4"></script>
 
     <%--   -- <!-- jQery -->
   <script src="../TemplateFiles/js/jquery-3.4.1.min.js"></script>--%>
@@ -304,5 +353,7 @@
     </script>
     <!-- End Google Map -->
 
+    
+  
 </body>
 </html>

@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.7.123, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -102,6 +106,7 @@
     <Content Include="Admin\OrderStatus.aspx" />
     <Content Include="Admin\Product.aspx" />
     <Content Include="Admin\Report.aspx" />
+    <Content Include="Admin\stock.aspx" />
     <Content Include="Admin\Users.aspx" />
     <Content Include="assets\css\animate.css\css\animate.css" />
     <Content Include="assets\css\bootstrap\css\bootstrap.min.css" />
@@ -216,12 +221,14 @@
     <Content Include="Global.asax" />
     <Content Include="Images\payment-bg.png" />
     <Content Include="User\About.aspx" />
+    <Content Include="User\bookseat.aspx" />
     <Content Include="User\Cart.aspx" />
     <Content Include="User\ChangePassword.aspx" />
     <Content Include="User\Charge.aspx" />
     <Content Include="User\checkout.aspx" />
     <Content Include="User\Contact.aspx" />
     <Content Include="User\Default.aspx" />
+    <Content Include="User\festival.aspx" />
     <Content Include="User\Invoice.aspx" />
     <Content Include="User\Login.aspx" />
     <Content Include="User\Menu.aspx" />
@@ -229,11 +236,14 @@
     <Content Include="User\Payment1.aspx" />
     <Content Include="User\payment2.aspx" />
     <Content Include="User\PaymentPage.aspx" />
+    <Content Include="User\ProductDetails.aspx" />
     <Content Include="User\Profile.aspx" />
     <Content Include="User\Registration.aspx" />
     <Content Include="User\ResetPassword.aspx" />
+    <Content Include="User\ReviewForm.aspx" />
     <Content Include="User\SliderUserControl1.ascx" />
     <Content Include="User\Success.aspx" />
+    <Content Include="User\vaccanyreg.aspx" />
     <Content Include="User\videos.aspx" />
     <Content Include="User\Wishlist.aspx" />
     <Content Include="Web.config" />
@@ -295,6 +305,13 @@
     <Compile Include="Admin\Report.aspx.designer.cs">
       <DependentUpon>Report.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\stock.aspx.cs">
+      <DependentUpon>stock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\stock.aspx.designer.cs">
+      <DependentUpon>stock.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -321,6 +338,13 @@
     </Compile>
     <Compile Include="User\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\bookseat.aspx.cs">
+      <DependentUpon>bookseat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\bookseat.aspx.designer.cs">
+      <DependentUpon>bookseat.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
@@ -363,6 +387,13 @@
     </Compile>
     <Compile Include="User\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\festival.aspx.cs">
+      <DependentUpon>festival.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\festival.aspx.designer.cs">
+      <DependentUpon>festival.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\Invoice.aspx.cs">
       <DependentUpon>Invoice.aspx</DependentUpon>
@@ -413,6 +444,13 @@
     <Compile Include="User\PaymentPage.aspx.designer.cs">
       <DependentUpon>PaymentPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User\ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -434,6 +472,13 @@
     <Compile Include="User\ResetPassword.aspx.designer.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User\ReviewForm.aspx.cs">
+      <DependentUpon>ReviewForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ReviewForm.aspx.designer.cs">
+      <DependentUpon>ReviewForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User\SliderUserControl1.ascx.cs">
       <DependentUpon>SliderUserControl1.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -454,6 +499,13 @@
     </Compile>
     <Compile Include="User\User.Master.designer.cs">
       <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User\vaccanyreg.aspx.cs">
+      <DependentUpon>vaccanyreg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\vaccanyreg.aspx.designer.cs">
+      <DependentUpon>vaccanyreg.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\videos.aspx.cs">
       <DependentUpon>videos.aspx</DependentUpon>
@@ -496,6 +548,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Images\Category\" />
     <Folder Include="Images\Product\" />
+    <Folder Include="Images\review\" />
     <Folder Include="Images\User\" />
     <Folder Include="Models\" />
     <Folder Include="TemplateFiles\" />

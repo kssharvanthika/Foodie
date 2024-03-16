@@ -1,13 +1,17 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SliderUserControl1.ascx.cs" Inherits="Foodie.User.SliderUserControl1" %>
 
  <section class="slider_section ">
+       
    <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+      <asp:Button ID="btnRegister" runat="server" Text="Book the seat" CssClass="btn btn-primary" OnClick="btnRegister_Click" />
      <div class="carousel-inner">
        <div class="carousel-item active">
          <div class="container ">
            <div class="row">
              <div class="col-md-7 col-lg-6 ">
+               
                <div class="detail-box">
+                    
                  <h1>
                    Ice Cube Cafe
                  </h1>
@@ -78,5 +82,6 @@
        </ol>
      </div>
    </div>
+
 
  </section>

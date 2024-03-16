@@ -99,8 +99,14 @@ namespace Foodie.User
             {
                 Response.Redirect("Login.aspx");
             }
+            if (e.CommandName == "readMore")
+            {
+                int productId = Convert.ToInt32(e.CommandArgument);
+                // Redirect to the product details page with the selected product ID
+                Response.Redirect($"ProductDetails.aspx?ProductId={productId}");
+            }
         }
-
+        
         int isItemExistIncart(int productsId)
         {
             con = new SqlConnection(Connection.GetConnectionString());
@@ -121,10 +127,7 @@ namespace Foodie.User
             return quantity;
         }
 
-        protected void lnkAddToWishlist_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
 
         //public string LowerCase(object obj)

@@ -32,8 +32,9 @@ namespace Foodie.User
                 }
                 else
                 {
-                    registrationAmount = 100;
+                    registrationAmount = (decimal)Convert.ToDouble(Session["grandTotalPrice"]);
                     // Default value if session variable is not available or not valid
+                    //registrationAmount = (decimal)Convert.ToDouble(Session["TotalPrice"]);
                     ViewState["RegistrationAmount"] = registrationAmount;
                 }
                 Console.WriteLine("Registration Amount (After Session): " + registrationAmount);

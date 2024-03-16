@@ -12,6 +12,12 @@
     }
     </script>
      <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <%--<style>
+        .row{
+            background-image: url('../TemplateFiles/images/payment.jpg');
+            background-size: cover;
+        }
+    </style>--%>
     
 </asp:Content>
 

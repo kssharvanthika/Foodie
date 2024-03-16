@@ -42,15 +42,24 @@ namespace Foodie.User
 
                             if (expirationDate == DateTime.MinValue || expirationDate >= DateTime.Now)
                             {
-                                //Label totalPrice = e.Item.FindControl("lblDiscountedTotal") as Label;
-                                // Apply discount if the coupon is valid
-                                // Calculate the discounted total based on the fetched DiscountPercentage
-                                double originalTotal = Convert.ToDouble(Session["grandTotalPrice"]);// Get the original total from your order details;
-                                double discountedTotal = originalTotal - (originalTotal * (discountPercentage / 100));
+                                // Check if the original total is greater than or equal to a certain condition before applying discount
+                                double originalTotal = Convert.ToDouble(Session["grandTotalPrice"]);
+                                double condition = 200.0; // Define your condition here, for example, $100
 
-                                // Display the discounted total to the user or update the order details
-                                lblDiscountedTotal.Text = $"Discounted Total: {discountedTotal:C}";
-                                Session["grandTotalPrice1"] = discountedTotal;
+                                if (originalTotal >= condition)
+                                {
+                                    // Apply discount if the original total meets the condition
+                                    double discountedTotal = originalTotal - (originalTotal * (discountPercentage / 100));
+
+                                    // Display the discounted total to the user or update the order details
+                                    lblDiscountedTotal.Text = $"Discounted Total: {discountedTotal:C}";
+                                    Session["grandTotalPrice1"] = discountedTotal;
+                                }
+                                else
+                                {
+                                    // Display a message indicating that the original total doesn't meet the condition for the discount
+                                    lblDiscountedTotal.Text = $"Coupon is not applicable for orders less than {condition:C}.";
+                                }
                             }
                             else
                             {
@@ -65,12 +74,16 @@ namespace Foodie.User
                         }
                     }
                 }
+
             }
         }
+                
+            
+        
 
         protected void btnpaynow_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Payment1.aspx");  
+           Response.Redirect("Payment1.aspx");  
             //Response.Redirect("Payment.aspx");
         }
     }

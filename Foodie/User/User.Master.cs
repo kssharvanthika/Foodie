@@ -38,8 +38,14 @@ namespace Foodie.User
                 lbloginOrLogout.Text = "Login";
                 Session["cartCount"] = "0";
             }
-        
-       }
+
+
+
+            // ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "showAlert('Success', 'Stock updated successfully and email is sent !.', 'success');", true);
+            string script = "showSweetAlert();";
+            ScriptManager.RegisterStartupScript(this, GetType(), "ShowSweetAlert", script, true);
+
+        }
 
         protected void lbloginOrLogout_Click(object sender, EventArgs e)
         {
@@ -66,6 +72,11 @@ namespace Foodie.User
                 lblRegisterOrProfie.ToolTip = "User Registration";
                 Response.Redirect("Registration.aspx");
             }
+        }
+
+        protected void btnBlinking_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("festival.aspx");
         }
     }
 }

@@ -7,47 +7,38 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Foodie.User
+namespace Foodie.Admin
 {
 
 
-    public partial class Success
+    public partial class stock
     {
 
         /// <summary>
-        /// lblOrderId control.
+        /// ProductNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblOrderId;
+        protected global::System.Web.UI.WebControls.TextBox ProductNameTextBox;
 
         /// <summary>
-        /// lblPaymentId control.
+        /// ProductStockTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPaymentId;
+        protected global::System.Web.UI.WebControls.TextBox ProductStockTextBox;
 
         /// <summary>
-        /// btnReorder control.
+        /// UpdateStockButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReorder;
-
-        /// <summary>
-        /// btnreview control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnreview;
+        protected global::System.Web.UI.WebControls.Button UpdateStockButton;
     }
 }

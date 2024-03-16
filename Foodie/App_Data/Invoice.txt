@@ -1,0 +1,10 @@
+Invoice Details
+
+Order ID: order_Nlrio6icKxOHu4
+Payment ID: pay_Nlrj457YPK6GBA
+Profile Name: John Doe
+Product Name: Product XYZ
+Quantity: 2
+Registration Amount: 200.00
+
+Thank you for your payment!

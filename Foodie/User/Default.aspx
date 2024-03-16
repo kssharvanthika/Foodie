@@ -1,10 +1,45 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/User.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Foodie.User.Default" %>
 <%@ Import Namespace="Foodie" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Include SweetAlert JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Include SweetAlert CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+     <script type="text/javascript">
+     function showSweetAlert() {
+         Swal.fire({
+             title: "<strong>STAFF WANTED <u></u></strong>",
+             icon: "info",
+             html: `
+              We are hiring <b>!</b> <br>
+              <a href="vaccanyreg.aspx">Register now </a><br>
+              <i>APPLY WITHIN-</i><b>icecube122001@gmail.com</b><br>
+              <strong>Call Us <u>8778955509</u></strong>
+          `,
+             showCloseButton: true,
+             showCancelButton: true,
+             focusConfirm: false,
+             confirmButtonText: `
+              <i class="fa fa-thumbs-up"></i> Great!
+          `,
+             confirmButtonAriaLabel: "Thumbs up, great!",
+             cancelButtonText: `
+              <i class="fa fa-thumbs-down"></i>
+          `,
+             cancelButtonAriaLabel: "Thumbs down"
+         });
+     }
+ </script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <!-- offer section -->
+     
 
   <section class="offer_section layout_padding-bottom">
     <div class="offer_container">

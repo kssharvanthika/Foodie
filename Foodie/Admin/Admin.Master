@@ -428,17 +428,17 @@
                                     </li>
                                 </ul>
 
-                                <%--<div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">Retailer & Product details</div>
+                                <div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">In-Stock Message</div>
                                 <ul class="pcoded-item pcoded-left-item">
                                     <li>
-                                        <a href="Retailer.aspx">
+                                        <a href="stock.aspx">
                                             <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
-                                            <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Profit Calculation</span>
+                                            <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Stock message</span>
                                             <span class="pcoded-mcaret"></span>
                                         </a>
 
                                     </li>
-                                </ul>--%>
+                                </ul>
 
                             </div>
                         </nav>

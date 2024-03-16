@@ -211,8 +211,8 @@
                             <!-- End -->
                         </div>
                         <div class="card-footer">
-                            <%--<b class="badge badge-success badge-pill shadow-sm">Order Total: ₹ <% Response.Write(Session["grandTotalPrice"]); %> </b>--%>
-                            <b class="badge badge-success badge-pill shadow-sm">Order Total: ₹ <% Response.Write(Session["grandTotalPrice1"]); %> </b>
+                            <b class="badge badge-success badge-pill shadow-sm">Order Total: ₹ <% Response.Write(Session["grandTotalPrice"]); %> </b>
+                            <b class="badge badge-success badge-pill shadow-sm">Discouned Order Total: ₹ <% Response.Write(Session["grandTotalPrice1"]); %> </b>
                             <div class="pt-1">
                                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="card"
                                     HeaderText="Fix the following errors" Font-Names="Segoe Script" />

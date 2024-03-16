@@ -41,7 +41,7 @@
         </div>
         <div class="row">
             <div class="col-md-6 text-right">
-                <asp:Button runat="server" ID="btnRegister" Text="Pay the ammount" CssClass="btn btn-primary" 
+                <asp:Button runat="server" ID="btnRegister" Text="Pay the amount" CssClass="btn btn-primary" 
                     OnClick="btnRegister_Click"/>
             </div>
         </div>

@@ -34,7 +34,21 @@ namespace Foodie.User
                 
                     con.Open();
                     cmd.ExecuteNonQuery();
-                    lblMsg.Visible = true;
+                string senderEmail = "icecube122001@gmail.com"; // Change this to your email address
+                string recipientEmail = txtEmail.Text.Trim(); // Use the email provided by the user
+                string subject = "New Contact Form Submission";
+                string body = "Name: " + txtName.Text.Trim() + "<br/>" +
+                              "Email: " + txtEmail.Text.Trim() + "<br/>" +
+                              "Subject: " + txtSubject.Text.Trim() + "<br/>" +
+                              "Message: " + txtMessage.Text.Trim();
+
+                System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage(senderEmail, recipientEmail, subject, body);
+                mail.IsBodyHtml = true;
+
+                System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient();
+                smtp.Send(mail);
+
+                lblMsg.Visible = true;
                     lblMsg.Text = "Thanks for reaching out will look into your query";
                     lblMsg.CssClass = "alert alert-success";
                     Clear();
@@ -46,6 +60,7 @@ namespace Foodie.User
                 Response.Write("<script>alert('"+ex.Message+"')</script>");
             }
             finally { con.Close(); }
+
         }
 
         private void Clear()
