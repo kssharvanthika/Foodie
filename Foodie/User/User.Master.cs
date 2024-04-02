@@ -42,8 +42,8 @@ namespace Foodie.User
 
 
             // ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "showAlert('Success', 'Stock updated successfully and email is sent !.', 'success');", true);
-            string script = "showSweetAlert();";
-            ScriptManager.RegisterStartupScript(this, GetType(), "ShowSweetAlert", script, true);
+            //string script = "showSweetAlert();";
+            //ScriptManager.RegisterStartupScript(this, GetType(), "ShowSweetAlert", script, true);
 
         }
 

@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/User.Master" AutoEventWireup="true" CodeBehind="Payment1.aspx.cs" Inherits="Foodie.User.Payment1" EnableViewState="true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+ 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <h1>Enter details for payment :</h1>
@@ -46,7 +47,7 @@
             </div>
         </div>
     </div>
-
+</div>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
         function OpenPaymentWindow(key, amountInSubunits, currency, name, descritpion, imageLogo, orderId, profileName, profileEmail, profileMobile, notes) {

@@ -4,9 +4,13 @@
        
    <div id="customCarousel1" class="carousel slide" data-ride="carousel">
       <asp:Button ID="btnRegister" runat="server" Text="Book the seat" CssClass="btn btn-primary" OnClick="btnRegister_Click" />
+     <%--<asp:Button ID="btnvacancy" runat="server" Text="Hiring" CssClass="btn btn-primary" OnClick="btnvacancy_Click" />--%>
+
      <div class="carousel-inner">
+         
        <div class="carousel-item active">
          <div class="container ">
+              
            <div class="row">
              <div class="col-md-7 col-lg-6 ">
                

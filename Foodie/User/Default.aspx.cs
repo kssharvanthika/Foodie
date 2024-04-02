@@ -21,7 +21,8 @@ namespace Foodie.User
             if (!IsPostBack)
             {
                 getCategories();
-                
+                string script = "showSweetAlert();";
+                ScriptManager.RegisterStartupScript(this, GetType(), "ShowSweetAlert", script, true);
             }
 
         }

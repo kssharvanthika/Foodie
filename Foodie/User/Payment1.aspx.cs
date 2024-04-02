@@ -34,7 +34,7 @@ namespace Foodie.User
                 {
                     registrationAmount = (decimal)Convert.ToDouble(Session["grandTotalPrice"]);
                     // Default value if session variable is not available or not valid
-                    //registrationAmount = (decimal)Convert.ToDouble(Session["TotalPrice"]);
+
                     ViewState["RegistrationAmount"] = registrationAmount;
                 }
                 Console.WriteLine("Registration Amount (After Session): " + registrationAmount);
@@ -54,7 +54,7 @@ namespace Foodie.User
             string description = "Razorpay Payment Gateway Demo";
             string imageLogo = "";
             string profileName = txtName.Text;
-           string profileMobile = txtMobile.Text;
+            string profileMobile = txtMobile.Text;
             string profileEmail = txtEmail.Text;
             Dictionary<string, string> notes = new Dictionary<string, string>()
             {
@@ -69,10 +69,10 @@ namespace Foodie.User
             string jsFunction = "OpenPaymentWindow('" + _key + "', '" + amountinSubunits + "', '" + currency + "', '" + name + "', '" + description + "', '" + imageLogo + "', '" + orderId + "', '" + profileName + "', '" + profileEmail + "', '" + profileMobile + "', '" + JsonConvert.SerializeObject(notes) + "');";
             ClientScript.RegisterStartupScript(this.GetType(), "OpenPaymentWindow", jsFunction, true);
 
-           
+
         }
 
-        
+
 
         private string CreateOrder(decimal amountInSubunits, string currency, Dictionary<string, string> notes)
         {
@@ -100,5 +100,5 @@ namespace Foodie.User
             }
         }
     }
-    
+
 }

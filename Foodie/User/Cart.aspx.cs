@@ -1,4 +1,4 @@
-﻿   using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -18,7 +18,8 @@ namespace Foodie.User
         DataTable dt;
         decimal grandTotal = 0;
         protected void Page_Load(object sender, EventArgs e)
-         {if (!IsPostBack)
+         {
+            if (!IsPostBack)
             {
                 if (Session["userId"] == null)
                 {

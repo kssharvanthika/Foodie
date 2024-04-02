@@ -21,7 +21,7 @@
             <asp:Button ID="UpdateStockButton" runat="server" Text="Update Stock" CssClass="btn btn-primary" OnClick="UpdateStockButton_Click" />
         </div>
     
-    <!-- Include Bootstrap JS -->
+   <!-- Include Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Include SweetAlert JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

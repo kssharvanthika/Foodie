@@ -18,5 +18,10 @@ namespace Foodie.User
         {
             Response.Redirect("bookseat.aspx");
         }
+
+        //protected void btnvacancy_Click(object sender, EventArgs e)
+        //{
+        //    Response.Redirect("vaccancy.aspx");
+        //}
     }
 }

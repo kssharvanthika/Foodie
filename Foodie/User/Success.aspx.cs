@@ -19,6 +19,7 @@ namespace Foodie.User
         //    lblPaymentId.Text = Request.QueryString["paymentId"];
 
         //}
+        protected int RandomNumber { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -34,6 +35,8 @@ namespace Foodie.User
                 lblOrderId.Text = orderId;
                 lblPaymentId.Text = paymentId;
             }
+            Random random = new Random();
+            RandomNumber = random.Next(1, 5);
         }
 
         private void StorePurchaseInformation(string orderId, string paymentId)

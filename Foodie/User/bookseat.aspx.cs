@@ -106,7 +106,7 @@ namespace Foodie.User
                 {
                     // Book the seat
                     BookSeat(selectedSeat, customerName,email, bookingDate);
-                    lblMessage.Text = "Booking successful.";
+                    lblMessage.Text = "Booking successful.Email sent !";
                 }
                 else
                 {
@@ -280,28 +280,32 @@ namespace Foodie.User
 
             // Generate JavaScript to disable booked dates
             string script = "<script>";
+            script += "$(function() {"; // Start jQuery function
+
+            script += $"$('#{txtBookingDate.ClientID}').datepicker({{"; // Initialize datepicker
+            script += "beforeShowDay: function(date) {"; // Callback function to customize date display
+
+            // Iterate through each booked date
             foreach (DateTime bookedDate in bookedDates)
             {
                 // Convert the booked date to a string in the format yyyy-MM-dd
                 string formattedDate = bookedDate.ToString("yyyy-MM-dd");
 
-                // Append JavaScript to disable the date
-                script += $"$('#{txtBookingDate.ClientID}').datepicker('setDate', '{formattedDate}'); $('#{txtBookingDate.ClientID}').datepicker('option', 'beforeShowDay', function(date) {{ var disabledDates = [";
-
-                // Add the booked date to the array of disabled dates
-                script += $"new Date('{formattedDate}'),";
-
-                script += "];";
-                script += "var string = jQuery.datepicker.formatDate('yy-mm-dd', date);";
-                script += "return [disabledDates.indexOf(date.getTime()) === -1];";
-                script += "});";
+                // Append JavaScript to disable the booked date
+                script += $"var bookedDate = new Date('{formattedDate}');";
+                script += "if (date.getMonth() === bookedDate.getMonth() && date.getDate() === bookedDate.getDate()) {";
+                script += "return [false, '', 'Booked'];"; // Disable the booked date
+                script += "}";
             }
+
+            script += "},"; // End beforeShowDay function
+            script += "});"; // End datepicker initialization
+            script += "});"; // End jQuery function
             script += "</script>";
 
             // Register the JavaScript with the page
             ScriptManager.RegisterStartupScript(this, GetType(), "DisableBookedDates", script, false);
         }
-
 
 
         // Method to retrieve booked dates from the database

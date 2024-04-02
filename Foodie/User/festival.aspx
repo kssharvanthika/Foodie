@@ -25,7 +25,7 @@
                     <ItemTemplate>
                         <div class="col-md-4 mb-4">
                             <div class="card product-card">
-                                <img src='<%# Eval("ImageUrl") %>' class="card-img-top product-image" alt='<%# Eval("ProductName") %>' />
+                                <%--<img src='<%# Eval("ImageUrl") %>' class="card-img-top product-image" alt='<%# Eval("ProductName") %>' />--%>
                                 <div class="card-body">
                                     <h5 class="card-title"><%# Eval("ProductName") %></h5>
                                     <p class="card-text"><%# Eval("Description") %></p>
@@ -43,7 +43,7 @@
                 <div class="col-md-6 offset-md-3 text-center">
                     <h3>Total Price: ₹<asp:Literal ID="TotalPriceLiteral" runat="server"></asp:Literal></h3>
                 </div>
-                <a href="Payment.aspx" class="btn btn-primary">Buy Now</a>
+                <a href="Payment1.aspx" class="btn btn-primary">Buy Now</a>
             </div>
         </div>
 </asp:Content>

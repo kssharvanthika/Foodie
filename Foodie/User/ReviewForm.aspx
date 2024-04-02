@@ -27,7 +27,7 @@
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <h2>Product Review</h2>
+                <h2> Review</h2>
                 <div class="form-group">
  <label for="ddlRating">Rating:</label>
                 <asp:DropDownList ID="ddlRating" runat="server" CssClass="form-control">

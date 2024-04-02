@@ -1,66 +1,65 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/User.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Foodie.User.Default" %>
+
 <%@ Import Namespace="Foodie" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- Include SweetAlert JS -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include SweetAlert CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include SweetAlert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<!-- Include SweetAlert CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-     <script type="text/javascript">
-     function showSweetAlert() {
-         Swal.fire({
-             title: "<strong>STAFF WANTED <u></u></strong>",
-             icon: "info",
-             html: `
-              We are hiring <b>!</b> <br>
-              <a href="vaccanyreg.aspx">Register now </a><br>
-              <i>APPLY WITHIN-</i><b>icecube122001@gmail.com</b><br>
-              <strong>Call Us <u>8778955509</u></strong>
-          `,
-             showCloseButton: true,
-             showCancelButton: true,
-             focusConfirm: false,
-             confirmButtonText: `
-              <i class="fa fa-thumbs-up"></i> Great!
-          `,
-             confirmButtonAriaLabel: "Thumbs up, great!",
-             cancelButtonText: `
-              <i class="fa fa-thumbs-down"></i>
-          `,
-             cancelButtonAriaLabel: "Thumbs down"
-         });
-     }
- </script>
-
+    <script type="text/javascript">
+        function showSweetAlert() {
+            Swal.fire({
+                title: "<strong>STAFF WANTED <u></u></strong>",
+                icon: "info",
+                html: `
+                    We are hiring <b>!</b> <br>
+                    <a href="vaccanyreg.aspx">Register now </a><br>
+                    <i>APPLY WITHIN-</i><b>icecube122001@gmail.com</b><br>
+                    <strong>Call Us <u>8778955509</u></strong>
+                `,
+                showCloseButton: true,
+                showCancelButton: true,
+                focusConfirm: false,
+                confirmButtonText: `
+                    <i class="fa fa-thumbs-up"></i> Great!
+                `,
+                confirmButtonAriaLabel: "Thumbs up, great!",
+                cancelButtonText: `
+                    <i class="fa fa-thumbs-down"></i>
+                `,
+                cancelButtonAriaLabel: "Thumbs down"
+            });
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <!-- offer section -->
-     
 
-  <section class="offer_section layout_padding-bottom">
-    <div class="offer_container">
-      <div class="container ">
-        <div class="row">
-            <asp:Repeater ID="rCategory" runat="server">
-                <ItemTemplate>
-                    <div class="col-md-6  ">
-                        <div class="box ">
-                            <div class="img-box">
-                                <a href="Menu.aspx?id=<%#Eval("CategoryId") %>">
-                                <img src=" <%# Utils.GetImageUrl(Eval("ImageUrl")) %>" alt="">
-                            </a>
+
+    <section class="offer_section layout_padding-bottom">
+        <div class="offer_container">
+            <div class="container ">
+                <div class="row">
+                    <asp:Repeater ID="rCategory" runat="server">
+                        <ItemTemplate>
+                            <div class="col-md-6  ">
+                                <div class="box ">
+                                    <div class="img-box">
+                                        <a href="Menu.aspx?id=<%#Eval("CategoryId") %>">
+                                            <img src=" <%# Utils.GetImageUrl(Eval("ImageUrl")) %>" alt="">
+                                        </a>
                                     </div>
-                            <div class="detail-box">
-                                <h5><%#Eval("Name") %>
-                                </h5>
-                                <h6>
-                                    <span>20%</span> Off
-                                </h6>
-                                <a href="Menu.aspx?id=<%#Eval("CategoryId") %>">Order Now 
+                                    <div class="detail-box">
+                                        <h5><%#Eval("Name") %>
+                                        </h5>
+                                        <h6>
+                                            <span>20%</span> Off
+                                        </h6>
+                                        <a href="Menu.aspx?id=<%#Eval("CategoryId") %>">Order Now 
            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background: new 0 0 456.029 456.029;" xml:space="preserve">
                <g>
                    <g>
@@ -113,14 +112,14 @@
                <g>
                </g>
            </svg>
-                                </a>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </ItemTemplate>
-            </asp:Repeater>
-         
-         <%-- <div class="col-md-6  ">
+                        </ItemTemplate>
+                    </asp:Repeater>
+
+                    <%-- <div class="col-md-6  ">
             <div class="box ">
               <div class="img-box">
                 <img src="../TemplateFiles/images/o2.jpg" alt="">
@@ -190,99 +189,94 @@
               </div>
             </div>
           </div>--%>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- end offer section -->
+    <!-- end offer section -->
 
     <!-- about section -->
 
-  <section class="about_section layout_padding_bottom">
-    <div class="container  ">
+    <section class="about_section layout_padding_bottom">
+        <div class="container  ">
 
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="../TemplateFiles/images/about-img.png" alt="">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                We Are Feane
-              </h2>
-            </div>
-            <p>
-           Our mantra, 'Tasty Express, Where Flavor Meets Fast,' reflects our dedication to crafting scrumptious meals that fit seamlessly into your busy lifestyle. With a menu bursting with bold and zesty options, we redefine fast food by infusing it with premium quality and unparalleled taste. Join us at Tasty Express – where every meal is a journey of 
+            <div class="row">
+                <div class="col-md-6 ">
+                    <div class="img-box">
+                        <img src="../TemplateFiles/images/about-img.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="detail-box">
+                        <div class="heading_container">
+                            <h2>We Are Feane
+                            </h2>
+                        </div>
+                        <p>
+                            Our mantra, 'Tasty Express, Where Flavor Meets Fast,' reflects our dedication to crafting scrumptious meals that fit seamlessly into your busy lifestyle. With a menu bursting with bold and zesty options, we redefine fast food by infusing it with premium quality and unparalleled taste. Join us at Tasty Express – where every meal is a journey of 
                 culinary delight, ensuring that every moment you spend with us is as delicious as it is convenient."
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
+                        </p>
+                        <a href="videos.aspx">Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- end about section -->
+    <!-- end about section -->
 
     <!-- client section -->
 
-  <section class="client_section layout_padding-bottom pt-5">
-    <div class="container">
-      <div class="heading_container heading_center psudo_white_primary mb_45">
-        <h2>
-          What Says Our Customers
-        </h2>
-      </div>
-      <div class="carousel-wrap row ">
-        <div class="owl-carousel client_owl-carousel">
-          <div class="item">
-            <div class="box">
-              <div class="detail-box">
-                <p>
-                 I recently discovered this charming cafe, and it has quickly become my favorite spot in town. 
+    <section class="client_section layout_padding-bottom pt-5">
+        <div class="container">
+            <div class="heading_container heading_center psudo_white_primary mb_45">
+                <h2>What Says Our Customers
+                </h2>
+            </div>
+            <div class="carousel-wrap row ">
+                <div class="owl-carousel client_owl-carousel">
+                    <div class="item">
+                        <div class="box">
+                            <div class="detail-box">
+                                <p>
+                                    I recently discovered this charming cafe, and it has quickly become my favorite spot in town. 
                     The cozy ambiance creates a welcoming atmosphere, perfect for a casual meal or catching up with friends. 
-                </p>
-                <h6>
-                  Moana Michell
-                </h6>
-                <p>
-                  magna aliqua
-                </p>
-              </div>
-              <div class="img-box">
-                <img src="../TemplateFiles/images/client1.jpg" alt="" class="box-img">
-              </div>
+                                </p>
+                                <h6>Moana Michell
+                                </h6>
+                                <p>
+                                    magna aliqua
+                                </p>
+                            </div>
+                            <div class="img-box">
+                                <img src="../TemplateFiles/images/client1.jpg" alt="" class="box-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box">
+                            <div class="detail-box">
+                                <p>
+                                    I've been a regular at this cafe for the past few months, and while the food is generally good, there have been some inconsistencies. 
+                                </p>
+                                <h6>Mike Hamell
+                                </h6>
+                                <p>
+                                    magna aliqua
+                                </p>
+                            </div>
+                            <div class="img-box">
+                                <img src="../TemplateFiles/images/client2.jpg" alt="" class="box-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="box">
-              <div class="detail-box">
-                <p>
-                  I've been a regular at this cafe for the past few months, and while the food is generally good, there have been some inconsistencies. 
-                </p>
-                <h6>
-                  Mike Hamell
-                </h6>
-                <p>
-                  magna aliqua
-                </p>
-              </div>
-              <div class="img-box">
-                <img src="../TemplateFiles/images/client2.jpg" alt="" class="box-img">
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- end client section -->
+    <!-- end client section -->
 
 </asp:Content>
